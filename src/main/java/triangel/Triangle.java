@@ -1,9 +1,9 @@
 package triangel;
 
 public class Triangle {
-    private static double sizeA;
-    private static double sizeB;
-    private static double sizeC;
+    private double sizeA;
+    private double sizeB;
+    private double sizeC;
 
     public Triangle(double sizea, double sizeb, double sizec) {
         sizeA = sizea;
@@ -11,12 +11,13 @@ public class Triangle {
         sizeC = sizec;
     }
 
-    public static double getArea(){
-        double per=perimeter (sizeA, sizeB, sizeC);
-        return (Math.sqrt(per*(per-sizeA)*(per-sizeB)*(per-sizeC)));
+    public double getArea(){
+        double per=perimeter ();
+        return (Math.sqrt((per/2)*(per/2-sizeA)*(per/2-sizeB)*(per/2-sizeC)));
     }
 
-    public static double perimeter (double sizeA, double sizeB,double sizeC){
-        return (sizeA+sizeB+sizeC)/2;
+    public double perimeter (){
+        return (sizeA+sizeB+sizeC);
     }
+
 }
