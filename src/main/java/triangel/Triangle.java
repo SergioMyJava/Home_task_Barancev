@@ -9,6 +9,7 @@ public class Triangle {
         sizeA = sizea;
         sizeB = sizeb;
         sizeC = sizec;
+
     }
 
     public double getArea(){
