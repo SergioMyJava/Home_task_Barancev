@@ -33,4 +33,26 @@ public class TestsTriangel {
     void cancalculatePerimetrTwo(){
         Assertions.assertEquals(27,test2.perimeter());
     }
+
+    @Test
+    void cannotCreateTriangelWithNegativeSide(){
+        try{
+            new Triangle(10,3,3);
+            Assertions.fail();
+        }
+        catch(IllegalArgumentException exception){
+            System.out.println(exception);
+        }
+    }
+
+    @Test
+    void cannotCreateTriangelWithNoLessSide(){
+        try{
+            new Triangle(10,3,3);
+            Assertions.fail();
+        }
+        catch(IllegalArgumentException exception){
+            System.out.println(exception);
+        }
+    }
 }

@@ -6,9 +6,17 @@ public class Triangle {
     private double sizeC;
 
     public Triangle(double sizea, double sizeb, double sizec) {
-        sizeA = sizea;
-        sizeB = sizeb;
-        sizeC = sizec;
+        if(sizea<0 || sizeb<0 || sizec<0){
+            throw new IllegalArgumentException("Side cannot be negative");
+        }
+        if(sizea+sizeb<sizec || sizea+sizec<sizeb || sizec+sizeb<sizea){
+            throw new IllegalArgumentException("The sum of the two sides must not be less than the third side.");
+        }
+        else {
+            this.sizeA = sizea;
+            this.sizeB = sizeb;
+            this.sizeC = sizec;
+        }
     }
 
     public double getArea(){
