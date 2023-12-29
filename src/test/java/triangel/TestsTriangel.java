@@ -55,4 +55,25 @@ public class TestsTriangel {
             System.out.println(exception);
         }
     }
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    @Test
+    void equalseTriangel(){
+            var v1 = new Triangle(3,2,4);
+            var v2 = new Triangle(3,2,4);
+            Assertions.assertTrue(v1.equals(v2));
+    }
+
+    @Test
+    void notEqualseTriangele(){
+        var v1 = new Triangle(3,2,4);
+        var v2 = new Triangle(3,5,2);
+        Assertions.assertFalse(v1.equals(v2));
+    }
+
+    @Test
+    void withEqualseSideTriangel() {
+        var v1 = new Triangle(3, 2, 4);
+        var v2 = new Triangle(3, 4, 2);
+        Assertions.assertTrue(v1.equals(v2));
+    }
 }
